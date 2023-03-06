@@ -1,0 +1,212 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: ubuntu;
+  justify-content: center;
+}
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background:#232427;
+}
+.container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  padding: 100px 0 50px;
+}
+.container .card
+{
+  position: relative;
+  min-width: 320px;
+  height: 500px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),inset -5px -5px 15px rgba(255,255,255,.1), 5px 5px 15px rgba(0,0,0,.3),-5px -5px 15px rgba(255,255,255,.1);
+  border-radius: 15px;
+  margin: 30px;
+}
+.container .card .box
+{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #2a2b2f;
+  border-radius: 16px;
+  border: 2px solid #1e1f23;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:transform .4s, box-shadow .5s;
+}
+.container .card .box .icon
+{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: #f00;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  font-size: 1.8em;
+}
+.container .card .box h3
+{
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: 200;
+  color: #fff;
+}
+.container .card .box h4
+{
+  font-size: 2.2em;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+
+}
+.container .card .box h4 sup
+{
+  font-size: .75em;
+  font-weight: 300;
+}
+.container .card .box ul
+{
+  position: relative;
+}
+.container .card .box ul li
+{
+  list-style: none;
+  color: #fff;
+  text-align: center;
+  margin: 7px 0;
+}
+.container .card .box a
+{
+  position: relative;
+  display: inline-block;
+  padding: 15px 24px;
+  background: #f00;
+  border-radius: 25px;
+  text-align:  center;
+  color: #fff;
+  margin-top: 15px;
+  text-decoration: none;
+  font-weight: 300;
+
+}
+.container .card:nth-child(1) .box a,
+.container .card:nth-child(1) .box .icon
+{
+  color: #fff;
+  background: #2196f3;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.container .card:nth-child(2) .box a,
+.container .card:nth-child(2) .box .icon
+{
+  color: #fff;
+  background: #e91e63;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.container .card:nth-child(3) .box a,
+.container .card:nth-child(3) .box .icon
+{
+  color: #fff;
+  background: #97dc47;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.toggle
+{
+  position: absolute;
+  top: 10px;
+  left:calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+  /* padding: 2px; */
+  justify-content:center;
+  text-align: center;
+  align-items: center;
+  border: 3px solid #97dc47;
+  color: #97dc47;
+  display: flex;
+  margin: 2px;
+  border-radius: 50%;
+  /* background: #fff; */
+  cursor: pointer;
+
+}
+.container .card:hover .box
+{
+  transform: translateY(-50px);
+
+  box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
+}
+
+body.light .toggle
+{
+  background: #fff;
+  color: #32a3b1;
+}
+
+body.light .container .card
+{
+  box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.2),inset -10px -10px 15px rgba(255,255,255,.1), 10px 10px 10px rgba(0,0,0,.3),-5px -5px 15px rgba(255,255,255,.1);
+  border-radius: 15px;
+  margin: 30px;
+}
+body.light .toggle::before
+{
+  content: 'f755';
+}
+body.light
+{
+  background: #ebf5fc;
+}
+body.light .container .card .box
+{
+  background: #ebf5fc;
+  border:none;
+  box-shadow:0 10px 20px rgba(0, 0, 0, 0.3);
+}
+body.light .container .card:hover .box
+{
+  box-shadow:0 20px 40px rgba(0, 0, 0, 0.3);
+}
+body.light .container .card .box .content h3,
+body.light .container .card .box .content h4,
+body.light .container .card .box .content ul li
+
+{
+  color: #32a3b1;
+}
+@media screen and (max-width:920px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: 1200px;
+    padding: 100px 0 50px;
+    flex-direction: column;
+    align-content: stretch;
+}
+}
+@media screen and (max-width:920px){
+  .card{
+    max-height: 100vh;
+  }
+}
