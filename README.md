@@ -1,1 +1,1 @@
-# Bekhruz-Full
+# Bekhruz-Full-page
